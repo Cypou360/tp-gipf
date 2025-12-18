@@ -24,6 +24,13 @@ repositories {
     mavenCentral()
 }
 
+sonar {
+  properties {
+    property "sonar.projectKey", "TPControl"
+    property "sonar.host.url", "http://172.17.0.1:9000"
+  }
+}
+
 test {
     useJUnitPlatform()
     finalizedBy jacocoTestReport // report is always generated after tests run

@@ -26,8 +26,9 @@ repositories {
 
 sonar {
   properties {
-    property "sonar.projectKey", "TPControl"
-    property "sonar.host.url", "http://172.17.0.1:9000"
+      property "sonar.java.coveragePlugin", "jacoco"
+      property "sonar.projectKey", "TPControl"
+      property "sonar.host.url", "http://172.17.0.1:9000"
   }
 }
 
@@ -37,6 +38,10 @@ test {
 }
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
+    xml.destination file("${buildDir}/reports/jacoco.xml")
+    reports {
+        xml.required = true
+    }
 }
 
 // In this section you declare the dependencies for your production and test code

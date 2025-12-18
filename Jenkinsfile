@@ -19,7 +19,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 withSonarQubeEnv(installationName: 'sonar'){
-                    sh "./gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 sonar -Dsonar.token=sqp_9fbba9144cc9fa3ac943ac6f6da55a00053cd299"
+                    sh "./gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 sonar -Dsonar.token=squ_6b585d7835b08a3e26a6ee7cc8a922c33ee6f0b4"
                }
             }
         }

@@ -20,6 +20,7 @@ pipeline {
         }
         stage('Sonar') {
             steps {
+                sh 'echo sonarqube'
             }
         }
         stage('Final build') {

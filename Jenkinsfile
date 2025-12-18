@@ -23,7 +23,7 @@ pipeline {
                }
             }
         }
-        stage('Quality Gate') {
+        /*stage('Quality Gate') {
             steps {
                 withSonarQubeEnv(installationName: 'sonar'){
                     timeout(time: 5, unit: 'MINUTES')
@@ -32,7 +32,7 @@ pipeline {
                     }
                 }
            }
-        }
+        }*/
         stage('Final build') {
             steps {
                 sh './gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 jar'

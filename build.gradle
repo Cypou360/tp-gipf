@@ -38,6 +38,9 @@ test {
 }
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.enabled true
+    }
 }
 
 // In this section you declare the dependencies for your production and test code
